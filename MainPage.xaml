@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+    <StackLayout Padding="10" BackgroundColor="LightGray">
+        <Entry x:Name="ResultEntry" FontSize="32" HorizontalOptions="FillAndExpand" VerticalOptions="Start" IsReadOnly="True" Text="0" BackgroundColor="White" TextColor="Black" HeightRequest="60" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 1 -->
+            <Button Text="7" Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="8" Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="9" Grid.Row="0" Grid.Column="2" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="/" Grid.Row="0" Grid.Column="3" BackgroundColor="LightGray" Clicked="OnOperatorButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+
+            <!-- Row 2 -->
+            <Button Text="4" Grid.Row="1" Grid.Column="0" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="5" Grid.Row="1" Grid.Column="1" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="6" Grid.Row="1" Grid.Column="2" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="*" Grid.Row="1" Grid.Column="3" BackgroundColor="LightGray" Clicked="OnOperatorButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+
+            <!-- Row 3 -->
+            <Button Text="1" Grid.Row="2" Grid.Column="0" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="2" Grid.Row="2" Grid.Column="1" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="3" Grid.Row="2" Grid.Column="2" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" BackgroundColor="LightGray" Clicked="OnOperatorButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+
+            <!-- Row 4 -->
+            <Button Text="0" Grid.Row="3" Grid.Column="0" BackgroundColor="LightGray" Clicked="OnNumberButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="C" Grid.Row="3" Grid.Column="1" BackgroundColor="LightGray" Clicked="OnClearButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="=" Grid.Row="3" Grid.Column="2" BackgroundColor="LightGray" Clicked="OnEqualButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" BackgroundColor="LightGray" Clicked="OnOperatorButtonClicked">
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
+                </Button.GestureRecognizers>
+            </Button>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
